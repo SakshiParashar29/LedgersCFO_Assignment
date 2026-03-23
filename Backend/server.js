@@ -8,7 +8,9 @@ const taskRoutes = require('./Routes/task_routes');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://ledgers-cfo-assignment-green.vercel.app'
+}));
 app.use(express.json());
 
 connectDB();
