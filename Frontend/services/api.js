@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({baseURL: 'http://localhost:3000'});
+const API = axios.create({baseURL: 'https://ledgerscfo-assignment.onrender.com'});
 
 export const getClients = () => API.get('/api/clients');
 
