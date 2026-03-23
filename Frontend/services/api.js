@@ -8,4 +8,4 @@ export const getTasks = (clientId) => API.get(`/api/tasks/${clientId}`);
 
 export const createTask = (task) => API.post(`/api/tasks`, task);
 
-export const updateTask = (id, updatedTask) => API.patch(`/api/tasks/${id}`, updateTask);
+export const updateTask = (id, updatedTask) => API.patch(`/api/tasks/${id}`, updatedTask);

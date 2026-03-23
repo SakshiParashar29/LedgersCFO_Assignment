@@ -37,14 +37,19 @@ const ClientList = ({ onSelectClient, selectedClient }) => {
           onClick={() => onSelectClient(client)}
           className={`p-3 mb-2 rounded cursor-pointer border 
             ${selectedClient?._id === client._id
-              ? "bg-blue-500 text-white"   // selected client
-              : "bg-white hover:bg-blue-50" // not selected
+              ? "bg-orange-300 text-white"
+              : "bg-white hover:bg-blue-50"
             }`}
         >
-          <p className="font-semibold text-blue-600"> <div className="flex items-center gap-1"><MdBusiness/> {client.company_name}</div></p>
-          <p className="text-sm text-red-500"> <div className="flex items-center gap-1"><MdLocationOn/>  {client.country}</div></p>
-          <p className="text-sm text-green-600"> <div className="flex items-center gap-1">
-            <MdCategory/> {client.entity_type}</div></p>
+          <div className="flex items-center gap-1 font-semibold text-blue-600 mb-1">
+            <MdBusiness /> {client.company_name}
+          </div>
+          <div className="flex items-center gap-1 text-sm text-red-500 mb-1">
+            <MdLocationOn /> {client.country}
+          </div>
+          <div className="flex items-center gap-1 text-sm text-green-600">
+            <MdCategory /> {client.entity_type}
+          </div>
         </div>
       ))}
     </div>
